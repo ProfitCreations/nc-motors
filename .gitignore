@@ -1,7 +1,6 @@
 node_modules
 dist
 .tmp
-old
 docs
 npm-debug.log
 app/images
