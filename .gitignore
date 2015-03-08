@@ -1,0 +1,9 @@
+.DS_Store
+node_modules
+.tmp
+.sass-cache
+developement/img/*
+production/img/*
+developement/.phpintel
+developement/node_modules
+developement/nc-motors.sublime-project

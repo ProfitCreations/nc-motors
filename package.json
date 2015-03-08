@@ -1,0 +1,16 @@
+{
+  "name": "NC-Motors",
+  "version": "1.0.0",
+  "description": "WebSite voor nc-motors.nl",
+  "repository": {
+    "type": "git",
+    "url": "?.git"
+    },
+    "keywords": [
+    "nc-motors.nl",
+    "php",
+    "bootstrap"
+    ],
+    "author": "Luis Pinheiro",
+    "license": "ISC"
+  }
