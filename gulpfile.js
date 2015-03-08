@@ -10,8 +10,23 @@ var pagespeed = require('psi');
 var reload = browserSync.reload;
 var less = require('gulp-less');
 var path = require('path');
+var concat = require('gulp-concat');
+var uglify = require('gulp-uglify'),
 
+jsSources = [
+'app/scripts/buttons.js',
+'app/scripts/jquery.localScroll.js',
+'app/scripts/jquery.mixitup.min.js',
+'app/scripts/jquery.nav.js',
+'app/scripts/jquery.scrollTo.js',
+'app/scripts/jquery.scrollUp.js',
+'app/scripts/main.js',
+'app/scripts/plugins.js',
+'app/scripts/textEffect.jquery.js',
+'app/scripts/wow.min.js'
+];
 
+var outputDir = 'dist/'
 
 var AUTOPREFIXER_BROWSERS = [
 'ie >= 10',
@@ -24,6 +39,14 @@ var AUTOPREFIXER_BROWSERS = [
 'android >= 4.4',
 'bb >= 10'
 ];
+
+//Concatenate js
+gulp.task('concatenate', function() {
+  gulp.src(jsSources)
+  .pipe(concat('script.js'))
+  .pipe(uglify())
+  .pipe(gulp.dest(outputDir + 'scripts'))
+});
 
 // Lint JavaScript
 gulp.task('jshint', function () {
@@ -64,7 +87,7 @@ gulp.task('fonts', function () {
   .pipe($.size({title: 'fonts'}));
 });
 
-gulp.task('styles', function () {
+gulp.task('less', function () {
   return gulp.src('app/styles/*.less')
   .pipe(less())
   .pipe(gulp.dest('dist/styles/'));
@@ -166,7 +189,7 @@ gulp.task('serve:dist', ['default'], function () {
 
 // Build production files, the default task
 gulp.task('default', ['clean'], function (cb) {
-  runSequence('jshint', ['html', 'images', 'fonts', 'copy'], cb);
+  runSequence(['html', 'images', 'fonts', 'copy'], cb);
 });
 
 // Run PageSpeed Insights
