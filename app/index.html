@@ -1,82 +1,1170 @@
 <!doctype html>
 <html lang="">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Web Starter Kit</title>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NC-MOTORS</title>
 
-    <!-- Add to homescreen -->
-    <link rel="manifest" href="manifest.json">
+  <!-- Add to homescreen -->
+  <link rel="manifest" href="manifest.json">
 
-    <!-- Fallback to homescreen for Chrome <39 on Android -->
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="Web Starter Kit">
-    <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+  <!-- Fallback to homescreen for Chrome <39 on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="Web Starter Kit">
+  <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
 
-    <!-- Add to homescreen for Safari on iOS -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Web Starter Kit">
-    <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Web Starter Kit">
+  <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
 
-    <!-- Tile icon for Win8 (144x144 + tile color) -->
-    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
-    <meta name="msapplication-TileColor" content="#3372DF">
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+  <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+  <meta name="msapplication-TileColor" content="#3372DF">
 
-    <meta name="theme-color" content="#3372DF">
+  <meta name="theme-color" content="#3372DF">
 
-    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
-    <!--
-    <link rel="canonical" href="http://www.example.com/">
-    -->
+  <!-- Page styles -->
+  <!-- <link rel="stylesheet" href="styles/main.css"> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.2.2/css/material-wfont.min.css">
 
-    <!-- Page styles -->
-    <link rel="stylesheet" href="styles/main.css">
-  </head>
-  <body>
-    <header class="app-bar promote-layer">
-      <div class="app-bar-container">
-        <button class="menu"><img src="images/hamburger.svg" alt="Menu"></button>
-        <h1 class="logo">Web <strong>Starter Kit</strong></h1>
-        <section class="app-bar-actions">
-        <!-- Put App Bar Buttons Here -->
-        <!-- e.g <button><i class="icon icon-star"></i></button> -->
-        </section>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.2.2/css/material.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.2.2/css/ripples.min.css">
+
+  <link rel="stylesheet" href="styles/old-main.css">
+
+  <!-- Taal -->
+  <link rel="stylesheet" href="styles/buttons.css">
+  <!-- Flickity -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/flickity/0.3.1/flickity.min.css">
+
+  <script async src="scripts/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+  <style>
+    body {
+     padding-top: 50px;
+   }
+ </style>
+</head>
+<body>
+
+  <?php
+  require_once 'php-includes/head.inc.php';
+  ?>
+
+  <body id="content">
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+            <![endif]-->
+
+            <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+              <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                  <!-- New Button -->
+                  <button id="button-nav" type="button" class="tcon tcon-menu--xbutterfly navbar-toggle hidden-lg hidden-md" aria-label="toggle menu" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="tcon-menu__lines" aria-hidden="true"></span>
+                    <span class="tcon-visuallyhidden sr-only">toggle menu</span>
+                  </button>
+                  <ul>
+                    <li><a class="navbar-brand" href="#">
+                      <!-- NC-Motors -->
+                      <img src="images/Logo/Logo-nav.png" alt="brand">
+                    </a></li>
+                  </ul>
+
+                </div>
+                <!-- /.navbar-header -->
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                  <ul id="nav" class="nav navbar-nav navbar-right">
+                    <li class="current"><a class="menuItem" href="#home">Home</a>
+                    </li>
+                    <li><a class="menuItem" href="#wat">Wat we doen</a>
+                    </li>
+                    <li><a class="menuItem" href="#latest">Latest Projects</a>
+                    </li>
+                    <li><a class="menuItem" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li><a class="menuItem" href="#contact">Contact</a>
+                    </li>
+
+                    <li class="taal">
+                      <button title="English" class="btn btn-default btn-taal btn-raised" href="#" title="">
+                        <img class="img-responsive" src="images/flags/flag_lang_en.gif" alt="">
+                      </button>
+                    </li>
+                    <li class="taal">
+                      <button title="Dutch" class="btn btn-default btn-taal btn-raised" href="#" title="">
+                        <img class="img-responsive" src="images/flags/flag_lang_nl.gif" alt="">
+                      </button>
+                    </li>
+                    <li class="taal">
+                      <button title="Portugues" class="btn btn-default btn-taal btn-raised" href="#" title="">
+                        <img class="img-responsive" src="images/flags/Portugal-flat.png" alt="">
+                      </button>
+                    </li>
+                    <li>
+                      <!-- <a class="user-login" href="#" title="LogIn"> -->
+                      <a class="mdi-image-timer-auto" href="#" title="LogIn">
+
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+              </div>
+              <!-- /.Container-fluid -->
+            </nav>
+
+
+
+
+
+            <!-- Jumbotron -->
+            <div id="home" class="jumbotron">
+              <div class="container">
+                <img class="logo center-block wow slideInLeft img-responsive" src="images/Logo/Logo2.gif" alt="Logo">
+                <div class="row">
+      <!-- <div class="col-md-12 alert alert-dismissable alert-warning alert-fixed-bottom">
+        <button type="button" class="close" data-dismiss="alert">×</button>
+        <h4>Attentie!</h4>
+        <p>Deze website is momenteel in development, mogelijk dat sommige functies en services niet werken.
+          <button type="button" class="btn btn-primary btn-raised pull-right" data-dismiss="alert">Close</button>
+        </div> -->
+        <div class="col-md-12">
+          <h2 id="slogan" class="text-center wow slideInRight">"LET DREAMS HIT THE ROAD"</h2>
+        </div>
       </div>
-    </header>
+    </div>
+  </div>
 
-    <nav class="navdrawer-container promote-layer">
-      <h4>Navigation</h4>
-      <ul>
-        <li><a href="#hello">Hello</a></li>
-        <li><a href="#get-started">Get Started</a></li>
-        <li><a href="styleguide.html">Style Guide</a></li>
-      </ul>
-    </nav>
+  <div class="container marketing">
+    <div id="wat" class="row">
+      <br>
+      <br>
+      <h2 class="text-center title">WAT WE DOEN</h2>
+    </div>
 
-    <main>
-      <h1 id="hello">Hello!</h1>
-      <p>Welcome to Web Starter Kit.</p>
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
 
-      <h2 id="get-started">Get Started.</h2>
-      <p>Read how to <a href="https://developers.google.com/web/starter-kit">Get Started</a> or check out the <a href="styleguide.html">Style Guide</a>.</p>
-    </main>
+      <div class="col-lg-4 col-md-4 col-sm-4 over-shadow ">
+        <img src="images/Headings/Motor-heading.png" class="img-responsive center-block wow slideInLeft " alt="Motor">
+        <h3 class="text-center">CUSTOM MOTOREN</h3>
+        <p class="text-center">Custom motoren We bouwen custom motorfietsen. Voor ons is niets te gek. Altijd hebben we diverse motoren klaar om te bezichtigen</p>
 
-    <!-- build:js scripts/main.min.js -->
-    <script src="scripts/main.js"></script>
-    <!-- endbuild -->
+      </div>
+      <!-- /.col-lg-4 -->
+      <div class="col-lg-4 col-md-4 col-sm-4 over-shadow ">
+        <img src="images/Headings/Logo-heading.png" class="img-responsive center-block wow flip" alt="Logo">
+        <h3 class="text-center">MOTOR TUNING</h3>
+        <p class="text-center">Snel, sneller, snelst. Wij houden van motorblokken en hoe sneller hoe beter. Wij helpen je graag met complete motorswaps of tuning voor zowel auto als motoren. </p>
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-XXXXX-X', 'auto');
-      ga('send', 'pageview');
-    </script>
-    <!-- Built with love using Web Starter Kit -->
-  </body>
+      </div>
+      <!-- /.col-lg-4 -->
+      <div class="col-lg-4 col-md-4 col-sm-4 over-shadow ">
+        <img src="images/Headings/Services-heading.png" class="img-responsive center-block wow slideInRight" alt="Services">
+        <h3 class="text-center">ONDERHOUD</h3>
+        <p class="text-center">Heeft jouw motor of auto een onderhoudsbeurt nodig? Geen probleem wij doen alles van ketting vervangen tot versnellingsbak revisies. </p>
+
+      </div>
+      <!-- /.col-lg-4 -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container marketing -->
+
+
+  <div id="latest" class="container">
+    <br>
+    <br>
+    <h2 class="text-center title">LATEST PROJECTS</h2>
+
+
+    <div class="row featurette over-shadow ">
+      <div class="col-md-7 col-sm-7">
+        <h2 class="featurette-heading"><span class="text-muted">It'll blow your mind.</span></h2>
+        <div class="list-group">
+          <div class="list-group-separator"></div>
+          <div class="list-group-item">
+            <div class="row-action-primary">
+              <i class="mdi-maps-directions-bike"></i>
+            </div>
+            <div class="row-content">
+              <h4 class="list-group-item-heading">HONDA VLX 600 BOBBER</h4>
+            </div>
+          </div>
+          <div class="list-group-separator"></div>
+        </div>
+      </div>
+      <div class="col-md-5 col-sm-5">
+        <img class="over-shadow img-thumbnail featurette-image img-responsive wow slideInLeft" src="images/LatestProjects/IMG_83851.jpg" alt="Generic placeholder image">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette over-shadow ">
+      <div class="col-md-5 col-sm-5">
+        <img class="over-shadow img-thumbnail featurette-image img-responsive wow slideInRight" src="images/LatestProjects/IMG_8383.jpg" alt="Generic placeholder image">
+      </div>
+      <div class="col-md-7 col-sm-7">
+        <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
+        <div class="list-group">
+          <div class="list-group-separator"></div>
+          <div class="list-group-item">
+            <div class="row-action-primary">
+              <i class="mdi-maps-directions-bike"></i>
+            </div>
+            <div class="row-content">
+              <h4 class="list-group-item-heading">HONDA VLX 600 BOBBER</h4>
+            </div>
+          </div>
+          <div class="list-group-separator"></div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="featurette-divider ">
+
+    <div class="row featurette over-shadow ">
+      <div class="col-md-7 col-sm-7">
+        <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+        <div class="list-group">
+          <div class="list-group-separator"></div>
+          <div class="list-group-item">
+            <div class="row-action-primary">
+              <i class="mdi-maps-directions-bike"></i>
+            </div>
+            <div class="row-content">
+              <h4 class="list-group-item-heading">HONDA VLX 600 BOBBER</h4>
+            </div>
+          </div>
+          <div class="list-group-separator"></div>
+        </div>
+      </div>
+      <div class="col-md-5 col-sm-5">
+        <img class="over-shadow img-thumbnail featurette-image img-responsive wow slideInLeft" src="images/LatestProjects/IMG_67661.jpg" alt="Generic placeholder image">
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /#latest -->
+
+
+<hr class="featurette-divider" />
+    <!--
+  ================== Portfolio =====================
+-->
+<<div id="portfolio" class="container-fluid">
+<div class="row center-block">
+  <div class="col-md-12 center-block">
+    <br>
+    <br>
+    <h2 class="text-center title">PORTFOLIO</h2>
+
+    <!-- Begin MixItUp -->
+    <div class="row">
+      <div class="col-md-2 hidden-md hidden-sm hidden-xs">
+      </div>
+      <div class="col-md-12 col-sm-12">
+       <button class="filter btn btn-portfolio active" data-filter="all">All</button>
+       <button class="filter btn btn-portfolio" data-filter=".category-honda">Honda</button>
+       <button class="filter btn btn-portfolio" data-filter=".category-yamaha">yamaha</button>
+       <button class="filter btn btn-portfolio" data-filter=".category-kawasaki">kawasaki</button>
+       <button class="filter btn btn-portfolio" data-filter=".category-suzuki">suzuki</button>
+       <button class="filter btn btn-portfolio" data-filter=".category-harley">harley</button>
+       <button class="filter btn btn-portfolio" data-filter=".category-buell">buell</button>
+     </div>
+     <div class="col-md-2 hidden-md hidden-sm hidden-xs"></div>
+   </div>
+
+   <div id="Container" class="row center-block">
+    <div class="  ih-item square effect4 mix category-honda" data-myorder="1" style="display: inline-block;">
+      <div>
+        <div class="img">
+          <img class="img-responsive img-portfolio img-thumbnail" src="images/Portfolio/honda-cbr-600/honda-cbr-600.png" alt="honda-cbr-600">
+        </div>
+        <div class="mask1"></div>
+        <div class="mask2"></div>
+        <div class="info">
+          <h3>Honda cbr 600</h3>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-info btn-raised" data-toggle="modal" data-target="#honda-cbr-600">
+            <i class="mdi-image-collections"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="  ih-item square effect4 mix category-yamaha" data-myorder="2" style="display: inline-block;">
+      <div>
+        <div class="img"><img class="img-responsive img-portfolio img-thumbnail" src="images/Portfolio/yamaha-fzr-1000/yamaha-fzr-1000.png" alt="yamaha-fzr-1000">
+        </div>
+        <div class="mask1"></div>
+        <div class="mask2"></div>
+        <div class="info">
+          <h3>yamaha fzr 1000</h3>
+          <p>Description goes here</p>
+        </div>
+      </div>
+    </div>
+    <div class="  ih-item square effect4 mix category-honda" data-myorder="3" style="display: inline-block;">
+      <div>
+        <div class="img">
+          <img class="img-responsive img-portfolio img-thumbnail" src="images/Portfolio/honda-cbr-600-f1/honda-cbr-600-f1.png" alt="honda-cbr-600-f1">
+        </div>
+        <div class="mask1"></div>
+        <div class="mask2"></div>
+        <div class="info">
+          <h3>honda cbr 600 f1</h3>
+          <p>Description goes here</p>
+        </div>
+      </div>
+    </div>
+    <div class="  ih-item square effect4 mix category-honda" data-myorder="4" style="display: inline-block;">
+      <div>
+        <div class="img">
+          <img class="img-responsive img-portfolio img-thumbnail" src="images/Portfolio/honda-cbr-600-f2/honda-cbr-600-f2.png" alt="honda-cbr-600-f2">
+        </div>
+        <div class="mask1"></div>
+        <div class="mask2"></div>
+        <div class="info">
+          <h3>honda cbr 600 f2</h3>
+          <p>Description goes here</p>
+        </div>
+      </div>
+    </div>
+    <div class="  ih-item square effect4 mix category-yamaha" data-myorder="5" style="display: inline-block;">
+      <div>
+        <div class="img">
+          <img class="img-responsive img-portfolio img-thumbnail" src="images/Portfolio/yamaha-fzr-1000-streetfighter/yamaha-fzr-1000-streetfighter.png" alt="yamaha-fzr-1000-streetfighter">
+        </div>
+        <div class="mask1"></div>
+        <div class="mask2"></div>
+        <div class="info">
+          <h3>yamaha fzr 1000 streetfighter</h3>
+          <p>Description goes here</p>
+        </div>
+      </div>
+    </div>
+    <div class="  ih-item square effect4 mix category-yamaha" data-myorder="6" style="display: inline-block;">
+      <div>
+        <div class="img">
+          <img class="img-responsive img-portfolio img-thumbnail" src="images/Portfolio/yamaha-fzr-1000-streetfighter-orange/yamaha-fzr-1000-streetfighter-orange.png" alt="yamaha-fzr-1000-streetfighter-orange">
+        </div>
+        <div class="mask1"></div>
+        <div class="mask2"></div>
+        <div class="info">
+          <h3>yamaha fzr 1000 streetfighter orange</h3>
+          <p>Description goes here</p>
+        </div>
+      </div>
+    </div>
+    <div class="  ih-item square effect4 mix category-honda" data-myorder="7" style="display: inline-block;">
+      <div>
+        <div class="img">
+          <img class="img-responsive img-portfolio img-thumbnail" src="images/Portfolio/honda-cm-450-bobber/honda-cm-450-bobber.png" alt="honda-cm-450-bobber">
+        </div>
+        <div class="mask1"></div>
+        <div class="mask2"></div>
+        <div class="info">
+          <h3>honda cm 450 bobber</h3>
+          <p>Description goes here</p>
+        </div>
+      </div>
+    </div>
+    <div class="  ih-item square effect4 mix category-kawasaki" data-myorder="8" style="display: inline-block;">
+      <div>
+        <div class="img">
+          <img class="img-responsive img-portfolio img-thumbnail" src="images/Portfolio/kawasaki-zxr750/kawasaki-zxr750.png" alt="kawasaki-zxr750">
+        </div>
+        <div class="mask1"></div>
+        <div class="mask2"></div>
+        <div class="info">
+          <h3>kawasaki zxr750</h3>
+          <p>Description goes here</p>
+        </div>
+      </div>
+    </div>
+    <div class="  ih-item square effect4 mix category-honda" data-myorder="9" style="display: inline-block;">
+      <div>
+        <div class="img">
+          <img class="img-responsive img-portfolio img-thumbnail" src="images/Portfolio/honda-cbr-600-f-cafe-racer/honda-cbr-600-f-cafe-racer.png" alt="honda-cbr-600-f-cafe-racer">
+        </div>
+        <div class="mask1"></div>
+        <div class="mask2"></div>
+        <div class="info">
+          <h3>honda cbr 600 f cafe racer</h3>
+          <p>Description goes here</p>
+        </div>
+      </div>
+    </div>
+    <div class="  ih-item square effect4 mix category-yamaha" data-myorder="10" style="display: inline-block;">
+      <div>
+        <div class="img">
+          <img class="img-responsive img-portfolio img-thumbnail" src="images/Portfolio/yamaha-yzf-r6/yamaha-yzf-r6.png" alt="yamaha-yzf-r6">
+        </div>
+        <div class="mask1"></div>
+        <div class="mask2"></div>
+        <div class="info">
+          <h3>yamaha yzf r6</h3>
+          <p>Description goes here</p>
+        </div>
+      </div>
+    </div>
+    <div class="  ih-item square effect4 mix category-yamaha" data-myorder="11" style="display: inline-block;">
+      <div>
+        <div class="img">
+          <img class="img-responsive img-portfolio img-thumbnail" src="images/Portfolio/yamaha-fzr-1000-streetfighter/yamaha-fzr-1000-streetfighter.png" alt="yamaha-fzr-1000-streetfighter">
+        </div>
+        <div class="mask1"></div>
+        <div class="mask2"></div>
+        <div class="info">
+          <h3>yamaha yzf1000r streetfighter</h3>
+          <p>Description goes here</p>
+        </div>
+      </div>
+    </div>
+    <div class="  ih-item square effect4 mix category-suzuki" data-myorder="12" style="display: inline-block;">
+      <div>
+        <div class="img">
+          <img class="img-responsive img-portfolio img-thumbnail" src="images/Portfolio/suzuki-gsx-r-750-streetfighter/suzuki-gsx-r-750-streetfighter.png" alt="suzuki-gsx-r-750-streetfighter">
+        </div>
+        <div class="mask1"></div>
+        <div class="mask2"></div>
+        <div class="info">
+          <h3>suzuki gsx r 750 streetfighter</h3>
+          <p>Description goes here</p>
+        </div>
+      </div>
+    </div>
+    <div class="  ih-item square effect4 mix category-honda" data-myorder="13" style="display: inline-block;">
+      <div>
+        <div class="img">
+          <img class="img-responsive img-portfolio img-thumbnail" src="images/Portfolio/honda-cb-650-bobber/honda-cb-650-bobber.png" alt="honda-cb-650-bobber">
+        </div>
+        <div class="mask1"></div>
+        <div class="mask2"></div>
+        <div class="info">
+          <h3>honda cb 650 bobber</h3>
+          <p>Description goes here</p>
+        </div>
+      </div>
+    </div>
+    <div class="  ih-item square effect4 mix category-yamaha" data-myorder="14" style="display: inline-block;">
+      <div>
+        <div class="img">
+          <img class="img-responsive img-portfolio img-thumbnail" src="images/Portfolio/yamaha-xs-400-bobber/yamaha-xs-400-bobber.png" alt="yamaha-xs-400-bobber">
+        </div>
+        <div class="mask1"></div>
+        <div class="mask2"></div>
+        <div class="info">
+          <h3>yamaha xs 400 bobber</h3>
+          <p>Description goes here</p>
+        </div>
+      </div>
+    </div>
+    <div class="  ih-item square effect4 mix category-yamaha" data-myorder="15" style="display: inline-block;">
+      <div>
+        <div class="img">
+          <img class="img-responsive img-portfolio img-thumbnail" src="images/Portfolio/yamaha-fzr-1000-streetfighter-2/yamaha-fzr-1000-streetfighter-2.png" alt="yamaha-fzr-1000-streetfighter-2">
+        </div>
+        <div class="mask1"></div>
+        <div class="mask2"></div>
+        <div class="info">
+          <h3>yamaha fzr 1000 streetfighter 2</h3>
+          <p>Description goes here</p>
+        </div>
+      </div>
+    </div>
+    <div class="  ih-item square effect4 mix category-yamaha" data-myorder="16" style="display: inline-block;">
+      <div>
+        <div class="img">
+          <img class="img-responsive img-portfolio img-thumbnail" src="images/Portfolio/yamaha-xs-400-bobber-2/yamaha-xs-400-bobber-2.png" alt="yamaha-xs-400-bobber-2">
+        </div>
+        <div class="mask1"></div>
+        <div class="mask2"></div>
+        <div class="info">
+          <h3>yamaha xs 400 bobber 2</h3>
+          <p>Description goes here</p>
+        </div>
+      </div>
+    </div>
+    <div class="  ih-item square effect4 mix category-yamaha" data-myorder="17" style="display: inline-block;">
+      <div>
+        <div class="img">
+          <img class="img-responsive img-portfolio img-thumbnail" src="images/Portfolio/yamaha-seca-750/yamaha-seca-750.png" alt="yamaha-seca-750">
+        </div>
+        <div class="mask1"></div>
+        <div class="mask2"></div>
+        <div class="info">
+          <h3>yamaha seca 750</h3>
+          <p>Description goes here</p>
+        </div>
+      </div>
+    </div>
+    <div class="  ih-item square effect4 mix category-honda" data-myorder="18" style="display: inline-block;">
+      <div>
+        <div class="img">
+          <img class="img-responsive img-portfolio img-thumbnail" src="images/Portfolio/honda-nighthawk-650/honda-nighthawk-650.png" alt="honda-nighthawk-650">
+        </div>
+        <div class="mask1"></div>
+        <div class="mask2"></div>
+        <div class="info">
+          <h3>honda nighthawk 650</h3>
+          <p>Description goes here</p>
+        </div>
+      </div>
+    </div>
+    <div class="  ih-item square effect4 mix category-honda" data-myorder="19" style="display: inline-block;">
+      <div>
+        <div class="img">
+          <img class="img-responsive img-portfolio img-thumbnail" src="images/Portfolio/honda-nighthawk-2/honda-nighthawk-2.png" alt="honda-nighthawk-2">
+        </div>
+        <div class="mask1"></div>
+        <div class="mask2"></div>
+        <div class="info">
+          <h3>honda nighthawk 2</h3>
+          <p>Description goes here</p>
+        </div>
+      </div>
+    </div>
+    <div class="  ih-item square effect4 mix category-yamaha" data-myorder="20" style="display: inline-block;">
+      <div>
+        <div class="img">
+          <img class="img-responsive img-portfolio img-thumbnail" src="images/Portfolio/yamaha-yzf-750r/yamaha-yzf-750r.png" alt="yamaha-yzf-750r">
+        </div>
+        <div class="mask1"></div>
+        <div class="mask2"></div>
+        <div class="info">
+          <h3>yamaha yzf 750r</h3>
+          <p>Description goes here</p>
+        </div>
+      </div>
+    </div>
+    <div class="  ih-item square effect4 mix category-kawasaki" data-myorder="21" style="display: inline-block;">
+      <div>
+        <div class="img">
+          <img class="img-responsive img-portfolio img-thumbnail" src="images/Portfolio/kawasaki-zx9r/kawasaki-zx9r.png" alt="kawasaki-zx9r">
+        </div>
+        <div class="mask1"></div>
+        <div class="mask2"></div>
+        <div class="info">
+          <h3>kawasaki zx9r</h3>
+          <p>Description goes here</p>
+        </div>
+      </div>
+    </div>
+    <div class="  ih-item square effect4 mix category-suzuki" data-myorder="22" style="display: inline-block;">
+      <div>
+        <div class="img">
+          <img class="img-responsive img-portfolio img-thumbnail" src="images/Portfolio/suzuki-gr-650/suzuki-gr-650.png" alt="suzuki-gr-650">
+        </div>
+        <div class="mask1"></div>
+        <div class="mask2"></div>
+        <div class="info">
+          <h3>suzuki gr 650</h3>
+          <p>Description goes here</p>
+        </div>
+      </div>
+    </div>
+    <div class="  ih-item square effect4 mix category-suzuki" data-myorder="23" style="display: inline-block;">
+      <div>
+        <div class="img">
+          <img class="img-responsive img-portfolio img-thumbnail" src="images/Portfolio/suzuki-gsx-750/suzuki-gsx-750.png" alt="suzuki-gsx-750">
+        </div>
+        <div class="mask1"></div>
+        <div class="mask2"></div>
+        <div class="info">
+          <h3>suzuki gsx 750</h3>
+          <p>Description goes here</p>
+        </div>
+      </div>
+    </div>
+    <div class="  ih-item square effect4 mix category-yamaha" data-myorder="24" style="display: inline-block;">
+      <div>
+        <div class="img">
+          <img class="img-responsive img-portfolio img-thumbnail" src="images/Portfolio/yamaha-seca-750-2/yamaha-seca-750-2.png" alt="yamaha-seca-750-2">
+        </div>
+        <div class="mask1"></div>
+        <div class="mask2"></div>
+        <div class="info">
+          <h3>yamaha seca 750 2</h3>
+          <p>Description goes here</p>
+        </div>
+      </div>
+    </div>
+    <div class="   ih-item square effect4 mix category-harley" data-myorder="25" style="display: inline-block;">
+      <div>
+        <div class="img">
+          <img class="img-responsive img-portfolio img-thumbnail" src="images/Portfolio/harley-sportster-833/harley-sportster-833.png" alt="harley-sportster-833">
+        </div>
+        <div class="mask1"></div>
+        <div class="mask2"></div>
+        <div class="info">
+          <h3>harley sportster 833</h3>
+          <p>Description goes here</p>
+        </div>
+      </div>
+    </div>
+    <div class="  ih-item square effect4 mix category-honda" data-myorder="26" style="display: inline-block;">
+      <div>
+        <div class="img">
+          <img class="img-responsive img-portfolio img-thumbnail" src="images/Portfolio/honda-cmx-450/honda-cmx-450.png" alt="honda-cmx-450">
+        </div>
+        <div class="mask1"></div>
+        <div class="mask2"></div>
+        <div class="info">
+          <h3>honda cmx 450</h3>
+          <p>Description goes here</p>
+        </div>
+      </div>
+    </div>
+    <div class="  ih-item square effect4 mix category-honda" data-myorder="27" style="display: inline-block;">
+      <div>
+        <div class="img">
+          <img class="img-responsive img-portfolio img-thumbnail" src="images/Portfolio/honda-vlx-600/honda-vlx-600.png" alt="honda-vlx-600">
+        </div>
+        <div class="mask1"></div>
+        <div class="mask2"></div>
+        <div class="info">
+          <h3>honda vlx 600</h3>
+          <p>Description goes here</p>
+        </div>
+      </div>
+    </div>
+    <div class="   ih-item square effect4 mix category-buell" data-myorder="28" style="display: inline-block;">
+      <div>
+        <div class="img">
+          <img class="img-responsive img-portfolio img-thumbnail" src="images/Portfolio/buell-m2-streetfighter/buell-m2-streetfighter.png" alt="buell-m2-streetfighter">
+        </div>
+        <div class="mask1"></div>
+        <div class="mask2"></div>
+        <div class="info">
+          <h3>buell m2 streetfighter</h3>
+          <p>Description goes here</p>
+        </div>
+      </div>
+    </div>
+    <div class="  ih-item square effect4 mix category-yamaha" data-myorder="29" style="display: inline-block;">
+      <div>
+        <div class="img">
+          <img class="img-responsive img-portfolio img-thumbnail" src="images/Portfolio/yamaha-xs-400-bobber-3/yamaha-xs-400-bobber-3.png" alt="yamaha-xs-400-bobber-3">
+        </div>
+        <div class="mask1"></div>
+        <div class="mask2"></div>
+        <div class="info">
+          <h3>yamaha xs 400 bobber 3</h3>
+          <p>Description goes here</p>
+        </div>
+      </div>
+    </div>
+    <div class="  ih-item square effect4 mix category-honda" data-myorder="30" style="display: inline-block;">
+      <div>
+        <div class="img">
+          <img class="img-responsive img-portfolio img-thumbnail" src="images/Portfolio/honda-cb500-76/honda-cb500-76.png" alt="honda-cb500-76">
+        </div>
+        <div class="mask1"></div>
+        <div class="mask2"></div>
+        <div class="info">
+          <h3>honda cb500 76</h3>
+          <p>Description goes here</p>
+        </div>
+      </div>
+    </div>
+    <div class="  ih-item square effect4 mix category-honda" data-myorder="31" style="display: inline-block;">
+      <div>
+        <div class="img">
+          <img class="img-responsive img-portfolio img-thumbnail" src="images/Portfolio/honda-vlx-600-bobber/honda-vlx-600-bobber.png" alt="honda-vlx-600-bobber">
+        </div>
+        <div class="mask1"></div>
+        <div class="mask2"></div>
+        <div class="info">
+          <h3>honda vlx 600 bobber</h3>
+          <p>Description goes here</p>
+        </div>
+      </div>
+    </div>
+    <div class="gap"></div>
+    <div class="gap"></div>
+  </div>
+  <!-- /#container -->
+
+</div>
+</div>
+</div>
+<!-- /.container -->
+
+<!-- Contact -->
+<div id="contact" class="container">
+  <br>
+  <br>
+  <h2 class="text-center title">CONTACT</h2>
+  <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8 well">
+
+
+      <form class="form-horizontal">
+        <fieldset>
+          <legend>Neem contact op als je zo'n awesome motor wilt</legend>
+          <div class="form-group">
+            <label for="naam" class="col-lg-2 control-label">Naam</label>
+            <div class="col-lg-10">
+              <div class="form-control-wrapper"><input class="form-control empty" id="inputEmail" placeholder="Naam" type="text"><span class="material-input"></span></div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+            <div class="col-lg-10">
+              <div class="form-control-wrapper"><input class="form-control empty" id="inputEmail" placeholder="Email" type="email"><span class="material-input"></span></div>
+            </div>
+          </div>
+
+          <!-- <div class="form-group">
+            <label for="inputFile" class="col-lg-2 control-label">Foto</label>
+            <div class="col-lg-10">
+              <input readonly="" class="form-control floating-label" placeholder="Browse..." type="text">
+              <input id="inputFile" multiple="" type="file">
+            </div>
+          </div> -->
+          <div class="form-group">
+            <label for="textArea" class="col-lg-2 control-label">Message</label>
+            <div class="col-lg-10">
+              <div class="form-control-wrapper"><textarea class="form-control empty" rows="3" id="textArea"></textarea><span class="material-input"></span></div>
+              <span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-lg-10">
+              <button type="submit" class="btn btn-primary  pull-right">Submit</button>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+
+
+    </div>
+    <div class="col-sm-2"></div>
+  </div>
+
+
+</div>
+</div>
+<!-- </div> -->
+<!-- /.container marketing -->
+
+
+
+
+<!-- FOOTER -->
+<footer>
+  <!-- scrollUp -->
+  <a style="" title="Scroll to top" href="#home" id="scrollUp" class="btn btn-default btn-fab btn-raised hidden"></a>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <p>© 2013 Nc-Motors · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+      </div>
+      <div class="col-sm-6">
+        <p>Designed by <a href="http://www.profitcreations.net" title="Visite ProfitCreations.net" target="_blank">ProfitCreations</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- /.Container -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<!-- build:js scripts/main.min.js -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="scripts/main.js"></script>
+<script src="scripts/plugins.js"></script>
+<script src="scripts/wow.min.js"></script>
+<script src="scripts/jquery.scrollTo.js"></script>
+<script src="scripts/jquery.localScroll.js"></script>
+<script src="scripts/jquery.scrollUp.js"></script>
+<script src="scripts/jquery.nav.js"></script>
+<script src="scripts/jquery.mixitup.min.js"></script>
+<script src="scripts/buttons.js"></script>
+<script src="scripts/textEffect.jquery.js"></script>
+
+<!-- endbuild -->
+
+<!-- Material Design -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.2.2/js/ripples.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.2.2/js/material.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $.material.init();
+  });
+</script>
+
+
+
+        <!--
+    Text Effects
+  -->
+  <script>
+    jQuery('#slogan').textEffect('jumble');
+  </script>
+
+  <!-- WOW -->
+
+  <script>
+    new WOW().init();
+  </script>
+
+  <!-- scrollUp -->
+
+  <script>
+    $(function() {
+      $.scrollUp({
+                        scrollName: 'scrollUp', // Element ID
+                        topDistance: '300', // Distance from top before showing element (px)
+                        topSpeed: 300, // Speed back to top (ms)
+                        animation: 'fade', // Fade, slide, none
+                        animationInSpeed: 200, // Animation in speed (ms)
+                        animationOutSpeed: 200, // Animation out speed (ms)
+                        scrollText: '', // Text for element
+                        activeOverlay: false, // Set CSS color to display scrollUp active point, e.g '#00FFFF'
+                      });
+    });
+  </script>
+
+
+        <!--
+scrollTo
+locallScroll
+-->
+
+<script type="text/javascript">
+  jQuery(function($) {
+                /**
+                 * Most jQuery.localScroll's settings, actually belong to jQuery.ScrollTo, check it's demo for an example of each option.
+                 * @see http://flesler.demos.com/jquery/scrollTo/
+                 * You can use EVERY single setting of jQuery.ScrollTo, in the settings hash you send to jQuery.LocalScroll.
+                 */
+
+                // The default axis is 'y', but in this demo, I want to scroll both
+                // You can modify any default like this
+                $.localScroll.defaults.axis = 'xy';
+
+                /**
+                 * NOTE: I use $.localScroll instead of $('#navigation').localScroll() so I
+                 * also affect the >> and << links. I want every link in the page to scroll.
+                 */
+                 $.localScroll({
+                        target: '#content', // could be a selector or a jQuery object too.
+                        queue: true,
+                        duration: 500,
+                        hash: true,
+                        onBefore: function(e, anchor, $target) {
+                                // The 'this' is the settings object, can be modified
+                              },
+                              onAfter: function(anchor, settings) {
+                                // The 'this' contains the scrolled element (#content)
+                              }
+                            });
+               });
+             </script>
+
+             <!-- jQuery.nav.js -->
+
+             <script>
+              $('#nav').onePageNav({
+                currentClass: 'current',
+                changeHash: false,
+                scrollSpeed: 750,
+                scrollThreshold: 0.5,
+                filter: '',
+                easing: 'swing',
+                begin: function() {
+                        //I get fired when the animation is starting
+                      },
+                      end: function() {
+                        //I get fired when the animation is ending
+                      },
+                      scrollChange: function($currentListItem) {
+                        //I get fired when you enter a section and I pass the list item of the section
+                      }
+                    });
+                  </script>
+
+                  <!-- MixitUp -->
+
+                  <script>
+                    $(function(){
+                      $('#Container').mixItUp();
+                    });
+                  </script>
+
+                  <!-- New Button -->
+                  <script>
+                    (function (root, factory) {
+                      if (typeof define === 'function' && define.amd) {
+        // AMD module
+        define(factory);
+      } else {
+        // Browser global
+        root.transformicons = factory();
+      }
+    }(this || window, function () {
+
+    // ####################
+    // MODULE TRANSFORMICON
+    // ####################
+    'use strict';
+
+    var
+        tcon = {}, // static class
+        _transformClass = 'tcon-transform',
+
+        // const
+        DEFAULT_EVENTS = {
+          transform : ['click'],
+          revert : ['click']
+        };
+
+    // ##############
+    // private methods
+    // ##############
+
+    /**
+    * Normalize a selector string, a single DOM element or an array of elements into an array of DOM elements.
+    * @private
+    *
+    * @param {(string|element|array)} elements - Selector, DOM element or Array of DOM elements
+    * @returns {array} Array of DOM elements
+    */
+    var getElementList = function (elements) {
+      if (typeof elements === 'string') {
+        return Array.prototype.slice.call(document.querySelectorAll(elements));
+      } else if (typeof elements === 'undefined' || elements instanceof Array) {
+        return elements;
+      } else {
+        return [elements];
+      }
+    };
+
+    /**
+    * Normalize a string with eventnames separated by spaces or an array of eventnames into an array of eventnames.
+    * @private
+    *
+    * @param {(string|array)} elements - String with eventnames separated by spaces or array of eventnames
+    * @returns {array} Array of eventnames
+    */
+    var getEventList = function (events) {
+      if (typeof events === 'string') {
+        return events.toLowerCase().split(' ');
+      } else {
+        return events;
+      }
+    };
+
+    /**
+    * Attach or remove transformicon events to one or more elements.
+    * @private
+    *
+    * @param {(string|element|array)} elements - Selector, DOM element or Array of DOM elements to be toggled
+    * @param {object} [events] - An Object containing one or more special event definitions
+    * @param {boolean} [remove=false] - Defines wether the listeners should be added (default) or removed.
+    */
+    var setListeners = function (elements, events, remove) {
+      var
+      method = (remove ? 'remove' : 'add') + 'EventListener',
+      elementList = getElementList(elements),
+      currentElement = elementList.length,
+      eventLists = {};
+
+        // get events or use defaults
+        for (var prop in DEFAULT_EVENTS) {
+          eventLists[prop] = (events && events[prop]) ? getEventList(events[prop]) : DEFAULT_EVENTS[prop];
+        }
+
+        // add or remove all events for all occasions to all elements
+        while(currentElement--) {
+          for (var occasion in eventLists) {
+            var currentEvent = eventLists[occasion].length;
+            while(currentEvent--) {
+              elementList[currentElement][method](eventLists[occasion][currentEvent], handleEvent);
+            }
+          }
+        }
+      };
+
+    /**
+    * Event handler for transform events.
+    * @private
+    *
+    * @param {object} event - event object
+    */
+    var handleEvent = function (event) {
+      tcon.toggle(event.currentTarget);
+    };
+
+    // ##############
+    // public methods
+    // ##############
+
+    /**
+    * Add transformicon behavior to one or more elements.
+    * @public
+    *
+    * @param {(string|element|array)} elements - Selector, DOM element or Array of DOM elements to be toggled
+    * @param {object} [events] - An Object containing one or more special event definitions
+    * @param {(string|array)} [events.transform] - One or more events that trigger the transform. Can be an Array or string with events seperated by space.
+    * @param {(string|array)} [events.revert] - One or more events that trigger the reversion. Can be an Array or string with events seperated by space.
+    * @returns {transformicon} transformicon instance for chaining
+    */
+    tcon.add = function (elements, events) {
+      setListeners(elements, events);
+      return tcon;
+    };
+
+    /**
+    * Remove transformicon behavior from one or more elements.
+    * @public
+    *
+    * @param {(string|element|array)} elements - Selector, DOM element or Array of DOM elements to be toggled
+    * @param {object} [events] - An Object containing one or more special event definitions
+    * @param {(string|array)} [events.transform] - One or more events that trigger the transform. Can be an Array or string with events seperated by space.
+    * @param {(string|array)} [events.revert] - One or more events that trigger the reversion. Can be an Array or string with events seperated by space.
+    * @returns {transformicon} transformicon instance for chaining
+    */
+    tcon.remove = function (elements, events) {
+      setListeners(elements, events, true);
+      return tcon;
+    };
+
+    /**
+    * Put one or more elements in the transformed state.
+    * @public
+    *
+    * @param {(string|element|array)} elements - Selector, DOM element or Array of DOM elements to be transformed
+    * @returns {transformicon} transformicon instance for chaining
+    */
+    tcon.transform = function (elements) {
+      getElementList(elements).forEach(function(element) {
+        element.classList.add(_transformClass);
+      });
+      return tcon;
+    };
+
+    /**
+    * Revert one or more elements to the original state.
+    * @public
+    *
+    * @param {(string|element|array)} elements - Selector, DOM element or Array of DOM elements to be reverted
+    * @returns {transformicon} transformicon instance for chaining
+    */
+    tcon.revert = function (elements) {
+      getElementList(elements).forEach(function(element) {
+        element.classList.remove(_transformClass);
+      });
+      return tcon;
+    };
+
+    /**
+    * Toggles one or more elements between transformed and original state.
+    * @public
+    *
+    * @param {(string|element|array)} elements - Selector, DOM element or Array of DOM elements to be toggled
+    * @returns {transformicon} transformicon instance for chaining
+    */
+    tcon.toggle = function (elements) {
+      getElementList(elements).forEach(function(element) {
+        tcon[element.classList.contains(_transformClass) ? 'revert' : 'transform'](element);
+      });
+      return tcon;
+    };
+
+    return tcon;
+  }));transformicons.add('.tcon');
+</script>
+
+<!-- Slick.js -->
+<!-- <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.4.1/slick.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.mod-slider').slick({
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            adaptiveHeight: true,
+            autoplay: true,lazyLoad: 'ondemand',
+            initialSlide: 0,
+            mobileFirst: true
+        });
+    });
+</script>
+-->
+
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script>
+  (function(b, o, i, l, e, r) {
+    b.GoogleAnalyticsObject = l;
+    b[l] || (b[l] =
+      function() {
+        (b[l].q = b[l].q || []).push(arguments)
+      });
+    b[l].l = +new Date;
+    e = o.createElement(i);
+    r = o.getElementsByTagName(i)[0];
+    e.src = '//www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e, r)
+  }(window, document, 'script', 'ga'));
+  ga('create', 'UA-XXXXX-X');
+  ga('send', 'pageview');
+</script>
+
+<!-- test static scrollTop -->
+<script>
+  document.onscroll = function() {
+    if( $(window).scrollTop() > $('header').height() ) {
+      $('#scrollUp').removeClass('hidden');
+    }
+    else {
+      $('#scrollUp').addClass('hidden');
+    }
+  };
+</script>
+<!-- Taal -->
+
+<!-- flickity -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/flickity/0.3.1/flickity.pkgd.min.js"></script>
+<script>
+  $('#main-gallery').flickity({
+  // options
+  cellAlign: 'center',
+  contain: true,
+  wrapAround: true,
+  autoPlay: true,
+  watchCSS: true
+});
+</script>
+<!-- NavTogle -->
+<script>''
+  $( '#nav > li' ).click(function() {
+    if ( $( '.navbar-ex1-collapse' ).hasClass( 'in' ) ) {
+      $( '#button-nav' ).toggleClass('tcon-transform');
+      $( '.navbar-ex1-collapse' ).toggleClass('in')
+    }
+  });
+
+</script>
+</body>
+
 </html>
+
+
+
